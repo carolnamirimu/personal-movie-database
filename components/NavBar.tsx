@@ -1,4 +1,5 @@
-
+import Link from 'next/link';
+import link from 'next/link'
 import React from 'react'
 import { MdLocalMovies } from 'react-icons/md';
 
@@ -8,10 +9,10 @@ const NavBar = () => {
           <span><MdLocalMovies classname='logo'/></span>
           <ul className='flex space-x-6'>
               <li>
-                  <a href='/'>Select Movies</a>
 </li>
-             <li><a href='/'>Personal Movie Database</a></li>
-              <li><a href='/'>About me</a></li>
+                  <Link href='/'>Select Movies</Link>
+             <li><Link href='/'>Personal Movie Database</Link></li>
+              <li><Link href='/'>About me</Link></li>
           </ul>
           
 

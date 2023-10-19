@@ -1,4 +1,7 @@
-import Image from "next/image"
+'use client';
+import NavBar from '../components/NavBar'
+import Searchbar from '../components/Searchbar';
+import MovieData from '../components/MovieData';
 export default function Home() {
   return (
     <main>
@@ -6,6 +9,9 @@ export default function Home() {
         Personal Movie Database
         
       </h1>
+      <NavBar />
+          <Searchbar />
+          <MovieData/>
    </main>
   )
 }
