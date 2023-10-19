@@ -1,29 +1,19 @@
-'use client'
-import { Button, TextFieldInput, TextFieldRoot } from '@radix-ui/themes'
-import React, { useState } from 'react'
- 
+"use client";
+import { Button, TextFieldInput, TextFieldRoot } from "@radix-ui/themes";
+import React from "react";
 
- 
-const Searchbar = () => {
- 
-    return (
-      <div className='flex max-w-xl space-x-4'>
+const Searchbar = ({ value, setSearchValue }) => {
+  return (
+    <div className="flex max-w-xl mb-3">
       <TextFieldRoot>
-                <TextFieldInput placeholder='Search movie....'>
-                 
-         </TextFieldInput>
+        <TextFieldInput
+          value={value}
+          onChange={(event) => setSearchValue(event.target.value)}
+          placeholder="Search movie...."
+        />
+      </TextFieldRoot>
+    </div>
+  );
+};
 
-            </TextFieldRoot>
-            <div>
-                <Button>
-                    Search
-                </Button>
-         
-            </div>
-
-        
-            </div>
-  )
-}
-
-export default Searchbar
+export default Searchbar;

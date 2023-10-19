@@ -10,7 +10,7 @@ export default function Home() {
         
       </h1>
       <NavBar />
-          <Searchbar />
+        
           <MovieData/>
    </main>
   )
