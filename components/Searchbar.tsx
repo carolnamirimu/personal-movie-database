@@ -1,16 +1,19 @@
 "use client";
-import { Button, TextFieldInput, TextFieldRoot } from "@radix-ui/themes";
+import { TextFieldInput, TextFieldRoot } from "@radix-ui/themes";
+import SearchIcon from "@mui/icons-material/Search";
 import React from "react";
 
 const Searchbar = ({ value, setSearchValue }) => {
   return (
-    <div className="flex max-w-xl mb-3">
+    <div className="max-w-xl px-5 py-5  ">
       <TextFieldRoot>
         <TextFieldInput
+          className="p-5 text-indigo-600"
           value={value}
           onChange={(event) => setSearchValue(event.target.value)}
           placeholder="Search movie...."
         />
+        <SearchIcon className="pt-1 text-4xl " />
       </TextFieldRoot>
     </div>
   );

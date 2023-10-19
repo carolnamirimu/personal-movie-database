@@ -6,7 +6,7 @@ import MovieCard from "./MovieCard";
 const MovieData = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [selectedMovie, setSelectedMovie] = useState({})
+  const [selectedMovie, setSelectedMovie] = useState({});
 
   const getMovieReaquest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=2532d0c9`;
@@ -24,12 +24,12 @@ const MovieData = () => {
 
   const onThumbnailClick = (movie) => {
     console.log(movie);
-    setSelectedMovie(movie)
+    setSelectedMovie(movie);
   };
   return (
     <div>
       <Searchbar props={searchValue} setSearchValue={setSearchValue} />
-      <div className="flex flex-wrap:nowarp max-3">
+      <div className="flex flex-wrap:nowarp max-3 space-x-2 ">
         <MoviesList movies={movies} onThumbnailClick={onThumbnailClick} />
       </div>
       <MovieCard movie={selectedMovie} />
