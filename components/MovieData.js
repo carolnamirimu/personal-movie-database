@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import MoviesList from "./MoviesList";
 import Searchbar from "./Searchbar";
-import MovieCard from "./MovieCard";
+import FavoriteMovieList from "./MovieCard";
 
 const MovieData = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [selectedMovie, setSelectedMovie] = useState({});
-
+  const [selectedMovies, setSelectedMovies] = useState([]);
+  console.log(movies);
   const getMovieReaquest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=2532d0c9`;
 
@@ -22,17 +22,23 @@ const MovieData = () => {
     getMovieReaquest(searchValue);
   }, [searchValue]);
 
-  const onThumbnailClick = (movie) => {
-    console.log(movie);
-    setSelectedMovie(movie);
+  const addMovie = (movie) => {
+    !selectedMovies.find((item) => item.imdbID === movie.imdbID) &&
+      selectedMovies.length < 10 &&
+      setSelectedMovies((prev) => [...prev, movie]);
+  };
+  const removeMovie = (movie) => {
+    setSelectedMovies((prev) =>
+      prev.filter((item) => item.imdbID !== movie.imdbID)
+    );
   };
   return (
     <div>
       <Searchbar props={searchValue} setSearchValue={setSearchValue} />
       <div className="flex flex-wrap:nowarp max-3 space-x-2 ">
-        <MoviesList movies={movies} onThumbnailClick={onThumbnailClick} />
+        <MoviesList movies={movies} onThumbnailClick={addMovie} />
       </div>
-      <MovieCard movie={selectedMovie} />
+      <MoviesList movies={selectedMovies} onThumbnailClick={removeMovie} />
     </div>
   );
 };

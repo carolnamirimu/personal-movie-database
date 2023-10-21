@@ -10,12 +10,12 @@ const NavBar = () => {
       </span>
       <ul className="flex space-x-6">
         <li></li>
-        <Link href="/">Select Movies</Link>
+        <Link href="#">Select Movies</Link>
         <li>
-          <Link href="/">Personal Movie Database</Link>
+          <Link href="/">My favorite movie</Link>
         </li>
         <li>
-          <Link href="/">About me</Link>
+          <Link href="/">About project</Link>
         </li>
       </ul>
     </nav>
