@@ -1,15 +1,17 @@
 import React from "react";
+import MovieRating from "./MovieRating";
 
-const MovieCard = ({movie}) => {
+const MovieCard = ({ movie }) => {
   return (
-    <div className="mt-3">
-      <h2 className="text-white text-2xl sticky top-40 bg-indigo-600 p-5 mb-2">
-        My favorite movies list
-      </h2>
-      <img src={movie.Poster}></img>
-      <div>
-        <br />
+    <div className="flex flex-row mt-3 gap-3">
+      <img className="w-36" src={movie.Poster} />
+      <div className="">
         <h3 className="items-center">{movie.Title}</h3>
+        <p>{movie.Year}</p>
+        <a href={`https://www.imdb.com/title/${movie.imdbID}`} target="blank">
+          IMDB
+        </a>
+        <MovieRating rating={4} />
       </div>
     </div>
   );

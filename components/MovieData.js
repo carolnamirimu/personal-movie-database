@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MoviesList from "./MoviesList";
 import Searchbar from "./Searchbar";
-import FavoriteMovieList from "./MovieCard";
+import FavoriteMovieList from "./FavoriteMoviesList";
 
 const MovieData = () => {
   const [movies, setMovies] = useState([]);
@@ -38,7 +38,10 @@ const MovieData = () => {
       <div className="flex flex-wrap:nowarp max-3 space-x-2 ">
         <MoviesList movies={movies} onThumbnailClick={addMovie} />
       </div>
-      <MoviesList movies={selectedMovies} onThumbnailClick={removeMovie} />
+      <FavoriteMovieList
+        movies={selectedMovies}
+        onThumbnailClick={removeMovie}
+      />
     </div>
   );
 };
