@@ -11,7 +11,7 @@ const MovieCard = ({ movie }) => {
         <a href={`https://www.imdb.com/title/${movie.imdbID}`} target="blank">
           IMDB
         </a>
-        <MovieRating rating={4} />
+        {/* <MovieRating rating={4} /> */}
       </div>
     </div>
   );
