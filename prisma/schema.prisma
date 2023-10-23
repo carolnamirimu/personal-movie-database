@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model movie {
+model Movie {
   id          Int      @id @default(autoincrement())
   title       String   @db.VarChar(255)
   ReleaseDate String   @db.VarChar(4)
