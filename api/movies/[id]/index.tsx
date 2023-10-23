@@ -7,8 +7,8 @@ export default async function handler(
 ) {
   const prisma = new PrismaClient();
   if (req.method === "GET") {
-    const users = await prisma.user.findMany();
-    return res.send(users);
+    const movies = await prisma.movie.findMany();
+    return res.send(movies);
   } else if (req.method === "post") {
     res.status(201).send("POST");
   }
