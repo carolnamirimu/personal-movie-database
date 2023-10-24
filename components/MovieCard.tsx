@@ -1,5 +1,4 @@
 import React from "react";
-import MovieRating from "./MovieRating";
 import MovieNotes from "./MovieNotes";
 
 const MovieCard = ({ movie }) => {
@@ -21,7 +20,6 @@ const MovieCard = ({ movie }) => {
           <label className="font-bold px-2">Link to Movie details:</label>
           IMDB
         </a>
-        {/* <MovieRating rating={4} /> */}
         <div>
           <MovieNotes movie={movie} />
         </div>
