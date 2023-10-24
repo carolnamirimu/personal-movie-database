@@ -34,6 +34,7 @@ const MovieData = () => {
   };
   return (
     <div>
+     
       <Searchbar props={searchValue} setSearchValue={setSearchValue} />
       <div className="flex flex-wrap:nowarp max-3 space-x-2 ">
         <MoviesList movies={movies} onThumbnailClick={addMovie} />
