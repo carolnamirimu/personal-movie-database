@@ -6,7 +6,7 @@ import React from "react";
 const Searchbar = ({ value, setSearchValue }) => {
   return (
     <div className="max-w-xl px-5 py-5  ">
-      <TextFieldRoot>
+      <TextFieldRoot >
         <TextFieldInput
           className="p-5 text-indigo-600"
           value={value}

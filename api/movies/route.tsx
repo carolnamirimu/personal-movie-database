@@ -14,8 +14,8 @@ export async function POST(request: NextRequest) {
     if (!validation.success)
         return NextResponse.json(validation.error.errors, { status: 400 })
     
-    const newIssue=prisma.movie.create({
+    const newMovie=prisma.movie.create({
 data:{title:body, rating:body.rating, notes:body.notes}
     })
-    return NextRequest/json(newIssue,{status:201})
+    return NextRequest/json(newMovie,{status:201})
 }
