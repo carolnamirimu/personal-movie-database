@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, TextArea, Select } from "@radix-ui/themes";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface MovieForm {
   notes: string;
@@ -9,11 +11,13 @@ interface MovieForm {
   rating: string;
 }
 const MovieNotes = ({ movie }) => {
+  const router = useRouter();
   const { register, handleSubmit } = useForm<MovieForm>();
   return (
     <form
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
+      onSubmit={handleSubmit(async (data) => {
+        await axios.post("api/movies", data);
+        router.push("/");
       })}
       className="flex flex-col gap-3"
     >
