@@ -5,7 +5,7 @@ import TheatersIcon from "@mui/icons-material/Theaters";
 const NavBar = () => {
   return (
     <div>
-      <nav className="flex space-x-6 border-b mb-6 px-5 h-14 items-center text-pink-100 ">
+      <nav className="flex space-x-6 border-b mb-6 px-5 h-14 items-center text-gray-400 ">
         <span>
           <TheatersIcon />
         </span>
@@ -28,7 +28,7 @@ const NavBar = () => {
       </nav>
       <h2
         id="favoriteMoviesList"
-        className="text-white text-2xl  top-40 bg-indigo-600 p-5 mb-2 mt-3"
+        className="text-white text-2xl  top-40 bg-gray-500 p-5 mt-3"
       >
         Search and Select favorite movies
       </h2>

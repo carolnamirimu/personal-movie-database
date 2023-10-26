@@ -3,13 +3,13 @@ import MovieNotes from "./MovieNotes";
 
 const MovieCard = ({ movie }) => {
   return (
-    <div className="flex sm:flex-col md:flex-row mt-3 p-2 gap-3 text-black bg-white ">
-      <div className="sm:w-full md:w-2/5 ">
+    <div className="flex sm:flex-row flex-col m-2 p-2 gap-3 text-black bg-white rounded-md">
+      <div className=" ">
         <img src={movie.Poster} />
       </div>
-      <div className="sm:w-full md:w-3/5 ">
+      <div className="sm:w-full ">
         <div className="items-center align-middle ">
-          <label className="font-bold px-2">Title: </label>
+          <label className="font-bold px-2 flex-wrap">Title: </label>
           {movie.Title}
         </div>
         <p>

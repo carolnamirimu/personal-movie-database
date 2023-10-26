@@ -5,10 +5,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const Footer = () => {
   return (
     <div>
-      <h2 id="about" className="text-white text-2xl bg-indigo-600 p-5 mb-2">
+      <h2
+        id="about"
+        className="text-white text-2xl top-40 bg-gray-500 p-5 mb-2 mt-3 p-5 mb-2"
+      >
         About project
       </h2>
-      <div className="flex space-x-6 px-5 h-14 items-center text-pink-100 ">
+      <div className="flex space-x-6 px-5 p-4h-14 items-center text-pink-100 ">
         This project was coded by Carol Namirimu and its
         <a
           className="font-bold"
