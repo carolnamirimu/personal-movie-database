@@ -7,7 +7,7 @@ const FavoriteMoviesList = ({ movies, onThumbnailClick }) => {
     <div>
       <h2
         id="favoriteMoviesList"
-        className="text-white text-2xl  top-40 bg-gray-500 sticky-10 p-5 mb-2 mt-3"
+        className="mx-1 sticky top-29 text-white text-2xl  top-40 bg-gray-500 p-5 mt-3"
       >
         My favorite Movies List
       </h2>
