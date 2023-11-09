@@ -28,7 +28,7 @@ const NavBar = () => {
       </nav>
       <h2
         id="favoriteMoviesList"
-        className="text-white text-2xl  top-40 bg-gray-500 p-5 mt-3"
+        className="text-white text-2xl  top-40 bg-gray-500 p-5 mt-3 flex justify-center"
       >
         Search and Select favorite movies
       </h2>

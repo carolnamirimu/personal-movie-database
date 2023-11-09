@@ -7,7 +7,7 @@ const Footer = () => {
     <div>
       <h2
         id="about"
-        className="text-white text-2xl top-40 bg-gray-500 p-5 mb-2 mt-3 p-5 mb-2"
+        className="text-white text-2xl top-40 bg-gray-500 p-5 mb-2 mt-3 p-5 mb-2 flex justify-center"
       >
         About project
       </h2>
@@ -23,7 +23,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="self-center  text-pink-100 px-5 pb-20">
-        <ul className="flex space-x-6 ">
+        <ul className="flex space-x-6 justify-center">
           <li>
             <a
               title="Linkedin profile"
